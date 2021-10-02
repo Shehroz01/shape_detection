@@ -2,10 +2,12 @@
 name = "shapes2d"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Shehroz Aslam <shehrozaslam01@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.7,<3.11"
+numpy = ">=1.19.2,<1.21.2"
+matplotlib = "^3.4.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
