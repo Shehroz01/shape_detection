@@ -59,7 +59,7 @@ selected a dataset of rectangles. The idea is to generate random rectangles on t
 Also generate bounding boxes in the same quantity of image dataset.
 
 
-                  ![geometric](https://user-images.githubusercontent.com/52299886/135727480-8be49e30-2068-47d6-8e3a-c756f216b8c1.PNG)
+![geometric](https://user-images.githubusercontent.com/52299886/135727480-8be49e30-2068-47d6-8e3a-c756f216b8c1.PNG)
 
 
 
