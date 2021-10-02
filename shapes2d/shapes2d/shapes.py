@@ -72,6 +72,13 @@ print(np.mean(images))
 print(np.std(images))
 
 
+# Normalize the xy coordinates, width, height, by grid_size (values between 0 and 1).
+boxes = bound_box.reshape(dataset_size, -1) / grid_size
+print(boxes.shape)
+print(np.mean(boxes))
+print(np.std(boxes))
+
+################################################################################
 
 
 
