@@ -55,6 +55,11 @@ For the first step, a model that detects a single geometric shape would be a goo
 selected a dataset of rectangles. The idea is to generate random rectangles on the 32*32 grid and create a dataset of 10000 images.
 Also generate bounding boxes in the same quantity of image dataset.
 
+
+![geometric](https://user-images.githubusercontent.com/52299886/135727480-8be49e30-2068-47d6-8e3a-c756f216b8c1.PNG)
+
+
+
 The dataset needs to be reshaped and normalized before it could be split into train and test dataset. (working on it) 
  
 
