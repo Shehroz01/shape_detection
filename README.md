@@ -53,8 +53,7 @@ Requirements:
 
 For the first step, a model that detects a single geometric shape would be a good start. For this purpose, I have
 selected a dataset of rectangles. The idea is to generate random rectangles on the 32*32 grid and create a dataset of 10000 images.
-Also generate bounding boxes in the same quantity and then through Intersection Over Union (IOU) measure the overlap
-between the two bounding boxes: the real and the predicted bounding boxes.
+Also generate bounding boxes in the same quantity of image dataset.
 
 The dataset needs to be reshaped and normalized before it could be split into train and test dataset. (working on it) 
  
