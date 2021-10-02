@@ -32,25 +32,32 @@ reproducible build, so other can recreate it on their own.
 * What do I need to know about Poetry?
 How it works, how to install it, and how package dependencies are managed. 
 
-
-
 * How does it work with Windows?
 It can be installed with Powershell, and it worked. Created a new project.
 
-* Think about the required dependencies in the next steps
+* Think about the required dependencies in the next steps (solved)
 
 
-## Step 3: Creating a dataset with 2D shapes, partial occlusions
+## Step 3: Setting up a tensorflow machine learning project using keras (Completed)
+
+* Which libraries do I need? (matplotlib, numpy, tensorflow)
+* Set up a virtual environment with compatible packages. Avoid installing packages through pip
+* Manage dependencies and PYTHONPATH errors (solved after a headache)
+
+
+## Step 4: Creating a dataset with 2D shapes, partial occlusions
 
 Requirements: 
 * Dataset having a 32*32 grid with 2D geometric shapes
 * Partial occlusions on the top of geometric shapes
 
+For the first step, a model that detects a single geometric shape would be a good start. For this purpose, I have
+selected a dataset of rectangles. The idea is to generate random rectangles on the 32*32 grid and create a dataset of 10000 images.
+Also generate bounding boxes in the same quantity and then through Intersection Over Union (IOU) measure the overlap
+between the two bounding boxes: the real and the predicted bounding boxes.
 
-## Step 4: Setting up a tensorflow machine learning project using keras
-
-(Need to brainstorm and identify the requirements)
-
+The dataset needs to be reshaped and normalized before it could be split into train and test dataset. (working on it) 
+ 
 
 ## Step 5: Creating a model for predicting geometric shapes
 
