@@ -23,6 +23,7 @@ steps:
 Created and shared with the team.
 
 
+
 ## Step 2: Creating a Poetry Project (Completed)
 
 * Why Poetry? 
@@ -38,11 +39,13 @@ It can be installed with Powershell, and it worked. Created a new project.
 * Think about the required dependencies in the next steps (solved)
 
 
+
 ## Step 3: Setting up a tensorflow machine learning project using keras (Completed)
 
 * Which libraries do I need? (matplotlib, numpy, tensorflow)
 * Set up a virtual environment with compatible packages. Avoid installing packages through pip
 * Manage dependencies and PYTHONPATH errors (solved after a headache)
+
 
 
 ## Step 4: Creating a dataset with 2D shapes, partial occlusions
@@ -56,16 +59,18 @@ selected a dataset of rectangles. The idea is to generate random rectangles on t
 Also generate bounding boxes in the same quantity of image dataset.
 
 
-![geometric](https://user-images.githubusercontent.com/52299886/135727480-8be49e30-2068-47d6-8e3a-c756f216b8c1.PNG)
+                  ![geometric](https://user-images.githubusercontent.com/52299886/135727480-8be49e30-2068-47d6-8e3a-c756f216b8c1.PNG)
 
 
 
 The dataset needs to be reshaped and normalized before it could be split into train and test dataset. (working on it) 
  
 
+
 ## Step 5: Creating a model for predicting geometric shapes
 
 (Need to brainstorm and identify the requirements)
+
 
 
 A problem well defined is a problem half solved!
