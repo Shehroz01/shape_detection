@@ -7,11 +7,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+##########################################################################################
+
+
 # Create a dataset of images with 32*32 grid with 2D geometric shapes placed on it.
 # This task would be for a single shape, a rectangle. Also we need to define the bounding boxes for detection.
 
 # Size of the dataset of images
-dataset_size = 50000
+dataset_size = 5000
 
 # Grid size required is 32*32
 grid_size = 32
@@ -49,10 +52,27 @@ print(bound_box.shape)
 
 
 # Plotting dataset images
-image = 1000
+image = 10
 plt.imshow(dataset[image].T, cmap='PuBu', interpolation='none', origin='lower', extent=[0, grid_size, 0, grid_size])
 for box in bound_box[image]:
     plt.gca().add_patch(matplotlib.patches.Rectangle((box[0], box[1]), box[2], box[3], ec='g', fc='b'))
 
 plt.show(block=True)
 plt.interactive(False)
+
+
+################################################################################
+
+# Preprocessing the dataset before the training
+
+# Reshape the image data
+images = (dataset.reshape(dataset_size, -1) - np.mean(dataset)) / np.std(dataset)
+print(images.shape)
+print(np.mean(images))
+print(np.std(images))
+
+
+
+
+
+
