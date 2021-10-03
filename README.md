@@ -81,10 +81,18 @@ networks because it is easy to train and gives good results. For the optimizer, 
 for a variety of applications. I will try to use other optimizers for the next steps but I think it's not required.
 
 And finally, I'm using 'mse' or the Mean Square Error. It is the mean or average of the square of the difference between real 
-and predicted values.
+and predicted values. Similarly for training the model, I trained for 100 epochs. As seen in the image below, both the training loss and the validation 
+loss decreases with the number of epochs increasing. On my system, it takes around 1-2 minutes for 10,000 image and bounding boxes dataset.
+
 
 
 ![training](https://user-images.githubusercontent.com/52299886/135758649-213587a8-0806-4a7e-b33f-68cf4da2a1a2.PNG)
 
+
+## Next Steps for this project:
+
+* Predict bounding boxes for the test dataset
+* Design a method/function for IOU calulation to calculate the overlapping between the real shape (test image) and the predicted bounding box.
+* Introduce multiple shapes in the dataset and add partial occlusions   
 
 A problem well defined is a problem half solved!
