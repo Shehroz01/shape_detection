@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-# Numpy and Matplotlib are the required libraries for this task
-# Matplotlib for visualization and Numpy for mathematical computation. (Does pycharm support plots with plt.imshow()?)
+# numpy and matplotlib are the required libraries for this task
+# matplotlib for visualization and numpy for mathematical computation. (Does pycharm support plots with plt.imshow()?)
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,7 +14,7 @@ import numpy as np
 # This task would be for a single shape, a rectangle. Also we need to define the bounding boxes for detection.
 
 # Size of the dataset of images
-dataset_size = 5000
+dataset_size = 10000
 
 # Grid size required is 32*32
 grid_size = 32
@@ -51,7 +51,10 @@ print(dataset.shape)
 print(bound_box.shape)
 
 
-# Plotting dataset images
+###############################################################################
+
+# Visualizing dataset images
+
 image = 10
 plt.imshow(dataset[image].T, cmap='PuBu', interpolation='none', origin='lower', extent=[0, grid_size, 0, grid_size])
 for box in bound_box[image]:
@@ -80,7 +83,7 @@ print(np.std(boxes))
 
 ################################################################################
 
-# Dividing the  image data for training and testing.
+# Dividing the image data for training and testing.
 
 # 75% data for training and 25% for testing
 ratio = int(0.75 * dataset_size)
@@ -94,3 +97,21 @@ test_bound_box = bound_box[ratio:]
 
 ################################################################################
 
+# Defining the model.
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+
+model = Sequential([
+        Dense(32, input_dim=images.shape[-1]), # TODO: Optimize
+        Activation('relu'),
+        Dropout(0.1), # TODO: Optimize
+        Dense(boxes.shape[-1])
+    ])
+model.compile('adam', 'mse') # adam works very well generally.
+
+
+# Training the model
+model.fit(train_images, train_boxes, nb_epoch=100, validation_data=(test_images, test_boxes), verbose=2)
+
+###############################################################################
