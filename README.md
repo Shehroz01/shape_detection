@@ -69,8 +69,19 @@ In the above figure, the rectangle is defined as a 1 whereas the background is z
 
 ## Step 5: Creating a model for predicting geometric shapes
 
-(Need to brainstorm and identify the requirements)
+For this task, I'm selecting a fairly simple model. The dataset isn't complex as compared to images of real objects such
+as cars or cats. For the dense layer, I will start with 32 and then play around to see if the results worsens or gets better.
+Similarly for the dropout value, I will select 0.1 and then gradually increase. Although, optimization might not matter for this
+task that much but in general, you have to develop some insights building a model especially when you are working with large
+real-image dataset. 
 
+For the activation function, I have selected the rectified linear activation function or ReLU. It is a piecewise linear function 
+that pass the input if it is positive, or zero if it's negative. It has become a standard function for many types of neural
+networks because it is easy to train and gives good results. For the optimizer, I have selected 'adam' because it works pretty well
+for a variety of applications. I will try to use other optimizers for the next steps but I think it's not required.
+
+And finally, I'm using 'mse' or the Mean Square Error. It is the mean or average of the square of the difference between real 
+and predicted values.
 
 
 A problem well defined is a problem half solved!
