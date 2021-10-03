@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-##########################################################################################
+##########################################################################
 
 
 # Create a dataset of images with 32*32 grid with 2D geometric shapes placed on it.
@@ -80,6 +80,17 @@ print(np.std(boxes))
 
 ################################################################################
 
+# Dividing the  image data for training and testing.
+
+# 75% data for training and 25% for testing
+ratio = int(0.75 * dataset_size)
+train_images = images[:ratio]
+test_images = images[ratio:]
+train_boxes = boxes[:ratio]
+test_boxes = boxes[ratio:]
+test_dataset = dataset[ratio:]
+test_bound_box = bound_box[ratio:]
 
 
+################################################################################
 
