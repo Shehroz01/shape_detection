@@ -112,7 +112,7 @@ model.compile('adam', 'mse') # adam works very well generally.
 
 
 # Training the model
-model.fit(train_images, train_boxes, nb_epoch=100, validation_data=(test_images, test_boxes), verbose=2)
+model.fit(train_images, train_boxes, epochs=100, validation_data=(test_images, test_boxes), verbose=2)
 
 
 ###############################################################################
