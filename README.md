@@ -84,4 +84,7 @@ And finally, I'm using 'mse' or the Mean Square Error. It is the mean or average
 and predicted values.
 
 
+![training](https://user-images.githubusercontent.com/52299886/135758649-213587a8-0806-4a7e-b33f-68cf4da2a1a2.PNG)
+
+
 A problem well defined is a problem half solved!
